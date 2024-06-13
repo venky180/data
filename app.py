@@ -1,15 +1,10 @@
 import inspect
 import textwrap
-
 import streamlit as st
-
-
 from streamlit_echarts import JsCode
 from streamlit_echarts import st_echarts
 import pandas as pd
-
 import json
-
 import random
 import os.path
 import requests
