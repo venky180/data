@@ -22,7 +22,7 @@ import ast
 
 
 def main():
-    st.title("California Racial Justice Act")
+    st.title("SF Racial Justice Act")
     
     # st.divider()
     
