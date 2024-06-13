@@ -48,7 +48,10 @@ def main():
         fil = df[(df['status'] == y) & (df['charge'] == ch)]
         x2 = []
         for x in x1:
-            x2.append(fil["race_distribution_dict"].iloc[0][x])
+            if x in fil["race_distribution_dict"].iloc[0].keys():
+                x2.append(fil["race_distribution_dict"].iloc[0][x])
+            else:
+                x2.append(0)
         y1[y] = x2
     
     st.markdown("Selected Charge - **"+ch+"**")
