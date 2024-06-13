@@ -105,6 +105,18 @@ def main():
                          },
                 "data": y1['convicted'],
             },
+
+            {
+                "name": '1385 PC - Guilty Plea to Other Charge',
+                "type": "bar",
+                "stack": "total",
+                "label": {
+                    "show": True,
+                    "position" : "center",
+                    "color" : "white"
+                         },
+                "data": y1['1385 PC - Guilty Plea to Other Charge'],
+            },
             
         ],
         }
