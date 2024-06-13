@@ -117,7 +117,7 @@ def main():
             
         ],
         }
-    st_echarts(options=options, height="800px")
+    st_echarts(options=options, height="600px",width="500px")
 
 
        
