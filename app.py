@@ -27,7 +27,7 @@ def main():
     # st.divider()
     
     with st.sidebar:
-        toggle = ("11351","11351.5","11352","11375","11378")
+        toggle = ("11351","11351.5","11352","11375","11378","11351|11351.5|11352|11375|11378")
         
         ch = st.selectbox(
             label="Select Type",
