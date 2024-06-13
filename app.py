@@ -42,7 +42,15 @@ def main():
 
     df = pd.read_csv("analysis_dashboard.csv")
     df["race_distribution_dict"] = df["race_distribution_dict"].apply(lambda x: ast.literal_eval(x))
-    fil = df[(df['status'] == stage) & (df['charge'] == ch)]
+    x1 = list(df[(df['status'] == 'filed') & (df['charge'] == '11351')]["race_distribution_dict"].iloc[0].keys())
+    y1= {}
+    for y in status_options:
+        fil = df[(df['status'] == y) & (df['charge'] == ch)]
+        x2 = []
+        for x in x1:
+            x2.append(fil["race_distribution_dict"].iloc[0][x])
+        y1[y] = x2
+    
     st.markdown("Selected Charge - **"+ch+"**")
     options = {
         "tooltip": {"trigger": "item", "axisPointer": {"type": "shadow"}, "order" : "valueDesc"},
@@ -57,13 +65,13 @@ def main():
                  "fontSize" : 18,
                 "color": "white"
             },
-            "data": list(fil["race_distribution_dict"].iloc[0].keys())
+            "data": x1
         },
         
         
         "series": [
             {
-                "name": "Cases",
+                "name": "Booked charges",
                 "type": "bar",
                 "stack": "total",
                 "label": {
@@ -71,7 +79,35 @@ def main():
                     "position" : "center",
                     "color" : "white"
                          },
-                "data": list(fil["race_distribution_dict"].iloc[0].values()),
+                "data": y1['booked'],
+            },
+            
+        ],
+         "series": [
+            {
+                "name": "Filed Charges",
+                "type": "bar",
+                "stack": "total",
+                "label": {
+                    "show": True,
+                    "position" : "center",
+                    "color" : "white"
+                         },
+                "data": y1['filed'],
+            },
+            
+        ],
+        "series": [
+            {
+                "name": "Convicted Charges",
+                "type": "bar",
+                "stack": "total",
+                "label": {
+                    "show": True,
+                    "position" : "center",
+                    "color" : "white"
+                         },
+                "data": y1['convicted'],
             },
             
         ],
