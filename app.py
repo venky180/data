@@ -29,10 +29,7 @@ def main():
             options=toggle,
         )
         status_options = ('filed','booked','convicted','1385 PC - Guilty Plea to Other Charge')
-        stage = st.selectbox(
-            label="Select stage",
-            options=status_options,
-        )
+
         
 
     df = pd.read_csv("analysis_dashboard.csv")
