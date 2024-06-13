@@ -24,7 +24,7 @@ import ast
 def main():
     st.title("California Racial Justice Act")
     
-    st.divider()
+    # st.divider()
     
     with st.sidebar:
         toggle = ("11351","11351.5","11352","11375","11378")
