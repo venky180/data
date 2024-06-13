@@ -83,7 +83,7 @@ def main():
             },
             
         ],
-         "series": [
+        "series": [
             {
                 "name": "Filed Charges",
                 "type": "bar",
