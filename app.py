@@ -3,8 +3,7 @@ import textwrap
 
 import streamlit as st
 
-from demo_echarts import ST_DEMOS
-from demo_pyecharts import ST_PY_DEMOS
+
 from streamlit_echarts import JsCode
 from streamlit_echarts import st_echarts
 import pandas as pd
