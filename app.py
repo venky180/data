@@ -80,8 +80,7 @@ def main():
                 "data": y1['booked'],
             },
             
-        ],
-        "series": [
+       
             {
                 "name": "Filed Charges",
                 "type": "bar",
@@ -94,8 +93,7 @@ def main():
                 "data": y1['filed'],
             },
             
-        ],
-        "series": [
+       
             {
                 "name": "Convicted Charges",
                 "type": "bar",
