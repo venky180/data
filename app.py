@@ -63,7 +63,7 @@ def main():
         
         "series": [
             {
-                "name": "Annual Eligible Caseload",
+                "name": "Cases",
                 "type": "bar",
                 "stack": "total",
                 "label": {
