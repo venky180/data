@@ -8,15 +8,14 @@ from demo_pyecharts import ST_PY_DEMOS
 from streamlit_echarts import JsCode
 from streamlit_echarts import st_echarts
 import pandas as pd
-import folium
-from streamlit_folium import st_folium, folium_static
+
 import json
-from branca.colormap import LinearColormap
+
 import random
 import os.path
 import requests
-import geopandas
-import branca
+
+
 import ast
 
 
